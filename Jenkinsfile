@@ -4,14 +4,14 @@ pipeline {
   tools {nodejs "node"}
 
 	environment{
-	registry="mrchelsea/react"
+	registry="maheshparde/nodejs"
 	registryCredential='dockerhub'
 	dockerImage=''
 	}
 	stages{
 	stage('Git') {
 		steps{
-		git 'https://github.com/rahulguptaft9/MajorTesting'
+		git 'https://github.com/MaheshParde/MajorTesting'
 		}	
 	}
 	
