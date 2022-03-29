@@ -21,7 +21,7 @@ pipeline {
           scannerHome = tool 'SonarQubeScanner'
         }
         withSonarQubeEnv('sonarqube') {
-          git url: "https://github.com/MaheshParde/MajorTesting",
+          git 'https://github.com/MaheshParde/MajorTesting',
           sh  "mvn -Dspring.profiles.acitve=dev -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml clean verify sonar:sonar"
 
         }
