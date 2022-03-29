@@ -18,7 +18,7 @@ pipeline {
 	stage('Code Analysis') {
       steps {
         script {
-          scannerHome = tool 'SonarQubeScanner'
+          scannerHome = tool 'sonarqube'
         }
         withSonarQubeEnv('sonarqube') {
           git 'https://github.com/MaheshParde/MajorTesting',
